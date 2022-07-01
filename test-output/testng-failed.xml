@@ -6,13 +6,4 @@
       <class name="day1.RAday1"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="day1.RAday1">
-        <methods>
-          <include name="testcase3"/>
-        </methods>
-      </class> <!-- day1.RAday1 -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
