@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="634" started-at="2022-07-04T04:57:30Z" finished-at="2022-07-04T04:57:30Z">
+  <suite name="Default suite" duration-ms="3354" started-at="2022-07-04T07:03:16Z" finished-at="2022-07-04T07:03:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="634" started-at="2022-07-04T04:57:30Z" finished-at="2022-07-04T04:57:30Z">
+    <test name="Default test" duration-ms="3354" started-at="2022-07-04T07:03:16Z" finished-at="2022-07-04T07:03:20Z">
       <class name="day1.RAday1">
-        <test-method status="PASS" signature="testcase8()[pri:0, instance:day1.RAday1@2b80d80f]" name="testcase8" duration-ms="618" started-at="2022-07-04T10:27:30Z" finished-at="2022-07-04T10:27:30Z">
+        <test-method status="PASS" signature="testcase9()[pri:0, instance:day1.RAday1@2b80d80f]" name="testcase9" duration-ms="3330" started-at="2022-07-04T12:33:16Z" finished-at="2022-07-04T12:33:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase8 -->
+        </test-method> <!-- testcase9 -->
       </class> <!-- day1.RAday1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

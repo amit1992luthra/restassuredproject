@@ -152,7 +152,7 @@ public class RAday1 {
 	
 	
 	@SuppressWarnings("unchecked")
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void testcase8()
 	{
 		RestAssured.baseURI="http://localhost:3000/";
@@ -207,6 +207,25 @@ public class RAday1 {
 		then()
 			.statusCode(201)
 			.log().all();*/
+			
+		
+		
+	}
+	
+	
+	@Test(enabled = true)
+	public void testcase9()
+	{
+		RestAssured.baseURI="http://localhost:3000/";
+		
+		Response obj = given()
+			.get("ibmstudents/5").
+		then()
+			.statusCode(200)
+			.log().all().extract().response();
+		
+		String bno = obj.jsonPath().getString("batchno");
+		System.out.println( bno);
 			
 		
 		
