@@ -1,5 +1,6 @@
 package day1;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -67,7 +68,7 @@ public class RAday1 {
 		
 	}
 	
-	@SuppressWarnings("unchecked")
+	
 	@Test(enabled = false)
 	public void testcase5()
 	{
@@ -125,18 +126,15 @@ public class RAday1 {
 		
 	}
 	
-	@Test(enabled = true,dataProvider="testdata")
+	@SuppressWarnings("unchecked")
+	@Test(enabled = false,dataProvider="testdata")
 	public void testcase7(String fname,String bno)
 	{
 		RestAssured.baseURI="http://localhost:3000/";
 		
 		JSONObject obj = new JSONObject();
-		//creating json body 
-		//this put is your json object class function 
-		//its not http method
-		
 		obj.put("name", fname);
-		obj.put("batchno", bno);
+		//obj.put("batchno", bno);
 		
 		given()
 			.headers("content-type","application/json")
@@ -151,6 +149,68 @@ public class RAday1 {
 		
 	}
 	
+	
+	
+	@SuppressWarnings("unchecked")
+	@Test(enabled = true)
+	public void testcase8()
+	{
+		RestAssured.baseURI="http://localhost:3000/";
+		
+		JSONObject parent = new JSONObject();
+		parent.put("id", 0);
+		parent.put("name", "Tommy");
+		parent.put("status", "available");
+		
+		JSONObject categoryobj = new JSONObject();
+		categoryobj.put("id", 0);
+		categoryobj.put("name", "doggy");
+		
+		
+		parent.put("category", categoryobj);
+		
+		JSONArray obj = new JSONArray();
+		obj.add("photo1");
+		obj.add("photo2");
+		
+		parent.put("photoUrls", obj);
+		
+		
+		JSONObject tagsobj = new JSONObject();
+		tagsobj.put("id", 0);
+		tagsobj.put("name", "cat");
+		
+		JSONObject tagsobj1 = new JSONObject();
+		tagsobj1.put("id", 0);
+		tagsobj1.put("name", "fish");
+		
+		JSONArray tagsarray = new JSONArray();
+		tagsarray.add(tagsobj);
+		tagsarray.add(tagsobj1);
+		
+		parent.put("tags", tagsarray);
+		
+		
+		
+		
+		System.out.println(parent);
+		
+		
+		
+		
+	/*	
+		given()
+			.headers("content-type","application/json")
+			.body(obj.toJSONString()).
+		when()
+			.post("ibmstudents").
+		then()
+			.statusCode(201)
+			.log().all();*/
+			
+		
+		
+	}
 	
 	
 	

@@ -1,44 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2878" started-at="2022-07-01T06:51:36Z" finished-at="2022-07-01T06:51:39Z">
+  <suite name="Default suite" duration-ms="634" started-at="2022-07-04T04:57:30Z" finished-at="2022-07-04T04:57:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2878" started-at="2022-07-01T06:51:36Z" finished-at="2022-07-01T06:51:39Z">
+    <test name="Default test" duration-ms="634" started-at="2022-07-04T04:57:30Z" finished-at="2022-07-04T04:57:30Z">
       <class name="day1.RAday1">
-        <test-method status="PASS" signature="testcase7(java.lang.String, java.lang.String)[pri:0, instance:day1.RAday1@2aafb23c]" name="testcase7" duration-ms="2767" started-at="2022-07-01T12:21:36Z" data-provider="testdata" finished-at="2022-07-01T12:21:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[amit]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="testcase8()[pri:0, instance:day1.RAday1@2b80d80f]" name="testcase8" duration-ms="618" started-at="2022-07-04T10:27:30Z" finished-at="2022-07-04T10:27:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testcase7 -->
-        <test-method status="PASS" signature="testcase7(java.lang.String, java.lang.String)[pri:0, instance:day1.RAday1@2aafb23c]" name="testcase7" duration-ms="82" started-at="2022-07-01T12:21:39Z" data-provider="testdata" finished-at="2022-07-01T12:21:39Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[saif]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testcase7 -->
+        </test-method> <!-- testcase8 -->
       </class> <!-- day1.RAday1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
