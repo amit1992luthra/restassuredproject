@@ -2,6 +2,7 @@ package day1;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
+import org.testng.ITestContext;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -214,23 +215,46 @@ public class RAday1 {
 	
 	
 	@Test(enabled = true)
-	public void testcase9()
+	public void testcase9(ITestContext var)
 	{
 		RestAssured.baseURI="http://localhost:3000/";
 		
 		Response obj = given()
-			.get("ibmstudents/5").
+			.get("ibmstudents/6").
 		then()
 			.statusCode(200)
 			.log().all().extract().response();
 		
-		String bno = obj.jsonPath().getString("batchno");
-		System.out.println( bno);
+		String idvariable = obj.jsonPath().getString("id");
+		System.out.println( idvariable);
+		
+		var.setAttribute("key1", idvariable);
+		
+
 			
 		
 		
 	}
 	
+	
+	@Test(enabled = true,dependsOnMethods = "testcase9")
+	public void testcase10(ITestContext var)
+	{
+		RestAssured.baseURI="http://localhost:3000/";
+		String id = var.getAttribute("key1").toString();
+		System.out.println(id);
+	given()
+			.delete("ibmstudents/"+id).
+		then()
+			.statusCode(200)
+			.log().all();
+		
+		
+
+			
+		
+		
+	}
 	
 	
 	
